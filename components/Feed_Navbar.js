@@ -24,7 +24,7 @@ export default function Feed_Navbar() {
 
         <Image source={require('../assets/images/dp.png')} style={styles.dp} />
       </View>
-      <View style={styles.line} />
+      {/* <View style={styles.line} /> */}
     </SafeAreaView>
   );
 }
@@ -39,6 +39,8 @@ const styles = StyleSheet.create({
   },
   FeedWrapper: {
     flex: 1,
+    marginTop: 5,
+    paddingTop: 0,
   },
   feedTitle: {
     position: 'absolute',
@@ -56,20 +58,20 @@ const styles = StyleSheet.create({
     opacity: 0.86,
   },
   line: {
-    position: 'absolute',
-    width: '100%',
-    height: 1,
-    left: 0,
-    top: 65,
-    backgroundColor: '#F4F4F4',
+    // position: 'absolute',
+    // width: '100%',
+    // height: 1,
+    // left: 0,
+    // top: 65,
+    // backgroundColor: '#F4F4F4',
   },
   navContainer: {
     flexDirection: 'row',
-    position: 'absolute',
+    // position: 'absolute',
     width: '100%',
-    height: 56,
+    height: 45,
     left: 0,
-    top: 24,
+    // top: 0,
     backgroundColor: 'white',
   },
   notyfWrapper: {

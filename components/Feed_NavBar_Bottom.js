@@ -52,8 +52,8 @@ export default function Feed_NavBar_Bottom() {
 const styles = StyleSheet.create({
   bottomNav: {
     flexDirection: 'row',
-    position: 'absolute',
-    bottom: -1,
+    // position: 'absolute',
+    // bottom: -1,
     width: '100%',
     height: 56,
     backgroundColor: '#fff',

@@ -12,6 +12,7 @@ import {
 
 // import Navbar_field from './components/Navbar_field';
 import FeedScreen from './screens/FeedScreen';
+import FeedDataScreen from './screens/FeedDataScreen';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -21,6 +22,11 @@ const App = () => {
         <Stack.Screen
           name="Feed"
           component={FeedScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="FeedData"
+          component={FeedDataScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
