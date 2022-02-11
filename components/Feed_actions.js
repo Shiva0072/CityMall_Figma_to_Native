@@ -1,28 +1,37 @@
-import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 
-export default function Feed_actions({style}) {
+export default function Feed_actions({actions}) {
+  const {likes, comments, shares, likeSelected, color} = actions;
   return (
     <View style={styles.container}>
       <View style={styles.ActionsWrapper}>
         <View style={styles.myAction}>
           <View styles={styles.actionIcon}>
-            <Image source={require('../assets/images/likes.png')} />
-            <Text style={styles.actionCount}>421</Text>
+            <Image
+              source={
+                likeSelected
+                  ? require('../assets/images/likesSelected.png')
+                  : require('../assets/images/likes.png')
+              }
+            />
+            <Text style={{color: likeSelected ? color : '#0000008f'}}>
+              {likes}
+            </Text>
           </View>
           <Text style={styles.text}>लाइक्स </Text>
         </View>
         <View style={styles.myAction}>
           <View styles={styles.actionIcon}>
             <Image source={require('../assets/images/Comment.png')} />
-            <Text style={styles.actionCount}>85</Text>
+            <Text style={{color: '#0000008f'}}>{comments}</Text>
           </View>
           <Text style={styles.text}>कमेंट्स </Text>
         </View>
-        <View style={styles.myAction}>
+        <View>
           <View styles={styles.actionIcon}>
             <Image source={require('../assets/images/Share.png')} />
-            <Text style={styles.actionCount}>92</Text>
+            <Text style={{color: '#0000008f'}}>{shares}</Text>
           </View>
           <Text style={styles.text}>शेयर करें </Text>
         </View>
@@ -42,15 +51,11 @@ export default function Feed_actions({style}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // position: 'absolute',
     backgroundColor: 'white',
-    height: 110,
+    height: 118,
     width: '100%',
-    // marginBottom: 10,
-    // paddingBottom: 0,
-    // bottom: -80,
-    // top: Dimensions.get('window').height - 150,
-    // top: 150,
+    borderTopWidth: 1,
+    borderColor: '#F4F4F4',
   },
   ActionsWrapper: {
     flexDirection: 'row',
@@ -59,36 +64,24 @@ const styles = StyleSheet.create({
     height: 56,
     justifyContent: 'space-around',
     marginVertical: 5,
-    // justifyContent: 'space-evenly',
-    // alignContent: 'space-around',
   },
   actionIcon: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
-    // alignContent: 'center',
-    // alignSelf: 'center',
-  },
-  actionCount: {
-    color: '#0000008f',
   },
   sendBtn: {
     marginTop: 14,
     marginRight: 13,
   },
-  myAction: {
-    // backgroundColor: 'red',
-  },
   CommentWrapper: {
     flexDirection: 'row',
-    marginTop: 63,
+    marginTop: 66,
     marginHorizontal: 16,
-    // backgroundColor: 'red',
     borderColor: '#00000033',
     borderRadius: 6,
     borderWidth: 1,
     borderStyle: 'solid',
-    // marginBottom:56
   },
   dp: {
     marginLeft: 12,

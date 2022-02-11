@@ -13,6 +13,13 @@ const FeedContentData = [
       data: '“हमेशा खुद में होंसला रखो” \n मैंने अपने आप में होंसला रखा और मेहनत के दम पर आज मैं अपने परिवार का कल बेहतर करने में समर्थ हूँ |',
       img: require('../images/post_1.png'),
     },
+    actions: {
+      likes: 421,
+      comments: 85,
+      shares: 92,
+      likeSelected: false,
+      color: '#E40046',
+    },
   },
   {
     id: 2,
@@ -27,6 +34,34 @@ const FeedContentData = [
     content: {
       data: 'Sometimes this happen.',
       img: require('../images/post_2.png'),
+    },
+    actions: {
+      likes: 421,
+      comments: 85,
+      shares: 92,
+      likeSelected: true,
+      color: '#E40046',
+    },
+  },
+  {
+    id: 3,
+    user: {
+      img: require('../images/CL_dp_1.png'),
+      text1: 'अमित कुमार | ',
+      text2: 'डायरेक्टर',
+      loc: 'रेवाड़ी • १५ मिनट ',
+      color: '#5A20CF',
+      follow: require('../images/follow.png'),
+    },
+    content: {
+      data: '“हमेशा खुद में होंसला रखो” \n मैंने अपने आप में होंसला रखा और मेहनत के दम पर आज मैं अपने परिवार का कल बेहतर करने में समर्थ हूँ |',
+    },
+    actions: {
+      likes: 421,
+      comments: 85,
+      shares: 92,
+      likeSelected: false,
+      color: '#E40046',
     },
   },
 ];

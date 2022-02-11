@@ -3,6 +3,7 @@ import {SafeAreaView, View, Text, Image, StyleSheet} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 MaterialCommunityIcons.loadFont();
+
 export default function Feed_Navbar() {
   return (
     <SafeAreaView style={styles.FeedWrapper}>
@@ -24,7 +25,6 @@ export default function Feed_Navbar() {
 
         <Image source={require('../assets/images/dp.png')} style={styles.dp} />
       </View>
-      {/* <View style={styles.line} /> */}
     </SafeAreaView>
   );
 }
@@ -53,25 +53,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 18,
     lineHeight: 27,
-    /* identical to box height, or 150% */
-    color: '#000', //'rgba(0, 0, 0, 0.86)',
+    color: '#000',
     opacity: 0.86,
-  },
-  line: {
-    // position: 'absolute',
-    // width: '100%',
-    // height: 1,
-    // left: 0,
-    // top: 65,
-    // backgroundColor: '#F4F4F4',
   },
   navContainer: {
     flexDirection: 'row',
-    // position: 'absolute',
     width: '100%',
     height: 45,
     left: 0,
-    // top: 0,
     backgroundColor: 'white',
   },
   notyfWrapper: {

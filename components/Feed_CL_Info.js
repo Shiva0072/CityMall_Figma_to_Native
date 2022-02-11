@@ -1,12 +1,5 @@
-import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
-
-// const img = require('../assets/images/CL_dp_1.png');
-// const text1 = 'अमित कुमार | ';
-// const text2 = 'डायरेक्टर';
-// const loc = 'रेवाड़ी • १५ मिनट ';
-// const color = '#5A20CF';
-// const follow = require('../assets/images/follow.png');
 
 export default function Feed_CL_Info({img, text1, text2, loc, color, follow}) {
   return (

@@ -3,7 +3,7 @@ import React from 'react';
 
 import postFilterData from '../assets/data/postFilterData';
 
-const renderItem = ({item, index, separators}) => {
+const renderItem = ({item}) => {
   return (
     <View
       style={[
@@ -50,13 +50,10 @@ const styles = StyleSheet.create({
   filterWrapper: {
     flex: 1,
     flexDirection: 'row',
-    position: 'absolute',
-    top: 51,
-    // height: 100,
-    // marginTop: 0,
+    marginTop: 2,
     backgroundColor: 'white',
     paddingVertical: 5,
-    // marginBottom: 1,
+    marginBottom: 10,
   },
   filter: {
     height: 32,
