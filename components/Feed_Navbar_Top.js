@@ -8,22 +8,28 @@ export default function Feed_Navbar() {
   return (
     <SafeAreaView style={styles.FeedWrapper}>
       <View style={styles.navContainer}>
-        <Image
-          style={styles.sideMenu}
-          source={require('../assets/images/sidemenu.png')}
-        />
-        <Text style={styles.feedTitle}>परिवार</Text>
-
-        <View style={styles.notyfWrapper}>
-          <MaterialCommunityIcons
-            name="bell"
-            style={styles.notyfBell}
-            size={22}
+        <View>
+          <Image
+            style={styles.sideMenu}
+            source={require('../assets/images/sidemenu.png')}
           />
-          <Text style={styles.notyfCount}>2</Text>
+          <Text style={styles.feedTitle}>परिवार</Text>
         </View>
+        <View>
+          <View style={styles.notyfWrapper}>
+            <MaterialCommunityIcons
+              name="bell"
+              style={styles.notyfBell}
+              size={22}
+            />
+            <Text style={styles.notyfCount}>2</Text>
+          </View>
 
-        <Image source={require('../assets/images/dp.png')} style={styles.dp} />
+          <Image
+            source={require('../assets/images/dp.png')}
+            style={styles.dp}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -31,11 +37,10 @@ export default function Feed_Navbar() {
 
 const styles = StyleSheet.create({
   dp: {
-    position: 'absolute',
     width: 32,
     height: 32,
-    left: 350,
-    top: 5,
+    right: 25,
+    top: -21,
   },
   FeedWrapper: {
     flex: 1,
@@ -58,31 +63,27 @@ const styles = StyleSheet.create({
   },
   navContainer: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     width: '100%',
-    height: 45,
+    height: 42,
     left: 0,
     backgroundColor: 'white',
   },
   notyfWrapper: {
-    position: 'absolute',
     width: 24,
     height: 24,
-    left: 300,
+    right: '250%',
     top: 8,
   },
   notyfBell: {
     color: 'black',
-    position: 'absolute',
-    left: 2.57,
     top: 0.57,
   },
   notyfCount: {
-    position: 'absolute',
     width: 14,
     height: 15,
-    left: '58.33%',
-    right: '16.67%',
-    top: -5,
+    left: 10,
+    top: -30,
     fontFamily: 'Poppins-Regular',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -94,10 +95,7 @@ const styles = StyleSheet.create({
     borderRadius: 13,
   },
   sideMenu: {
-    position: 'absolute',
-    left: '4.44%',
-    right: '88.89%',
-    top: '10%',
-    bottom: '96.99%',
+    left: '70%',
+    top: '12%',
   },
 });
